@@ -2,12 +2,9 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions
 on: [push]
 jobs:
-  build:
-    defaults:
-      run:
-        shell: cmd
   my_first_job:
     name: My First Job
     runs-on: [self-hosted]
     steps:
-      - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
+      run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
+      shell: cmd
