@@ -2,6 +2,10 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions
 on: [push]
 jobs:
+  build:
+    defaults:
+      run:
+        shell: cmd
   my_first_job:
     name: My First Job
     runs-on: [self-hosted]
